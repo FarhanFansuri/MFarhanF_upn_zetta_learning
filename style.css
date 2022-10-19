@@ -23,6 +23,9 @@
 }
 
 header{
+    top: 0;
+    position: sticky;
+    width: 100%;
     padding: 10px;
     height: 50px;
     background-color: aqua;
@@ -31,7 +34,10 @@ header{
 footer{
     padding: 10px;
     height: 50px;
-    background-color:bisque
+    background-color:bisque;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
 }
 
 .middle{
