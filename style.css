@@ -1,0 +1,19 @@
+.card{
+    padding: 10px;
+    width: 27%;
+    height: 200px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+}
+.container{
+    display: flex;
+    width: 700px;
+    flex-wrap: wrap;
+    justify-content: space-evenly
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.card img{
+    width: 100%;
+}
