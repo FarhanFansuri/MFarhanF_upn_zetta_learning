@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'angular_learning';
+  image = '../assets/iphone.jpeg';
+  public truth = false;
+  changeTruth():void{
+    this.truth = !this.truth;
+    console.log("hello");
+  }
 }
