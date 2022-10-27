@@ -1,0 +1,10 @@
+1. Apa itu angular?
+Angular adalah framework yang dibuat untuk membuat aplikasi single-page berbasis javascript
+2. Apa itu module?
+Module pada angular adalah container yang mengandung berbagai component yang terhubung satu sama lain.
+3. Apa itu component?
+component adalah bagian bagian kecil dari aplikasi yang telah dibuat.
+4. bagaimana mereka semua terhubung?
+
+[component1, component2, component3, ... , component ke n] => bagian dari modul1
+perubahan pada aplikasi adalah perubahan pada component yang telah dibuat.
