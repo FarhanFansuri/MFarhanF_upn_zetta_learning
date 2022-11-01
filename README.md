@@ -1,5 +1,5 @@
 # Mochammad-Farhan-Fansuri_upn_zetta_learning
-## ini adalah quiz pelatihan day 1
+## ini adalah quiz pelatihan angu;ar day 1
 The picture above is an example from a youtube page. Please answer the following questions.
 1. How would you split the page into multiple components?
 - kita bisa menggunakan angular sebagai framework untul sigle page client application dan menggunakan module sebagai wadah dari bebrapa komponen
