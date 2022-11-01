@@ -1,0 +1,7 @@
+1. Create a report on Angular Lifecycle and scenarios to use them
+
+proyek : edit profil
+
+fitur:
+- mengubah warna dari card profil
+- akan ada pringatan apabila ada perubahan dalam mengedit profil
