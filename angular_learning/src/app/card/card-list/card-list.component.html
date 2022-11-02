@@ -1,0 +1,9 @@
+<div style="display:flex">
+    <div class=" card m-3" style="width: 18rem;" *ngFor="let getdata of data">
+        <img [src]="getdata.imgMakanan" class=" card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{getdata.namaMakanan}}</h5>
+            <a [routerLink]="['/detail',getdata.idMakanan]" class=" btn btn-primary"> detail </a>
+        </div>
+    </div>
+</div>
