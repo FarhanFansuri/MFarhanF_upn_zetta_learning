@@ -1,0 +1,29 @@
+<button mat-button (click)="onDetail()">Detail</button>
+<button mat-button routerLink="/add">Add</button>
+<div class="list-card m-3" style="width: 20%;" *ngFor="let data of datalist">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        {{data.Name}}
+      </mat-card-title>
+      <mat-card-subtitle>
+        Profile
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content *ngIf="detail">
+      <h5>Name : {{data.Name}}</h5>
+      <h5>Ade : {{data.Age}}</h5>
+      <h5>Gender : {{data.Gender}}</h5>
+      <h5>Email : {{data.Email}}</h5>
+      <h5>Position : {{data.Position}}</h5>
+      <h5>Martial Status : {{data.MartialStatus}}</h5>
+      <h5>Address : {{data.Address}}</h5>
+      <h5>ZipCode : {{data.ZipCode}}</h5>
+      <h5>City : {{data.City}}</h5>
+      <h5>Country : {{data.Country}}</h5>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button routerLink="/edit">Edit</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
