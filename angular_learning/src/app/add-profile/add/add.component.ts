@@ -1,7 +1,9 @@
 import { DataService } from './../../data-servicee/data.service';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ThisReceiver } from '@angular/compiler';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-add',
@@ -10,28 +12,35 @@ import { ThisReceiver } from '@angular/compiler';
 })
 export class AddComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder, private dataservice: DataService) { }
+  constructor(private formBuilder: FormBuilder, private dataservice: DataService, private router: Router) { }
   profileForm = this.formBuilder.group({
-    IdNumber: [''],
-    Name: [''],
-    Age: [''],
-    Gender: [''],
-    Email: [''],
-    Position: [''],
-    MaritalStatus: [''],
-    Address: [''],
-    ZipCode: [''],
-    City: [''],
-    Country: ['']
+    IdNumber: new FormControl(null),
+    Name: new FormControl(null),
+    Age: new FormControl(null),
+    Gender: new FormControl(null),
+    Email: new FormControl(null),
+    Position: new FormControl(null),
+    MaritalStatus: new FormControl(null),
+    AddressData: new FormArray([])
   })
 
   data: any[] = [];
+  addData: any = (<FormArray>this.profileForm.get('AddressData')).controls
   ngOnInit(): void {
     this.data = this.dataservice.data
   }
   kirim() {
     this.dataservice.addData(this.profileForm.value);
-    console.log(this.data)
+    this.router.navigate(['']);
+  }
+
+  addAddress() {
+    (<FormArray>this.profileForm.get('AddressData')).push(new FormGroup({
+      Address: new FormControl(null),
+      ZipCode: new FormControl(null),
+      City: new FormControl(null),
+      Country: new FormControl(null)
+    }))
   }
 
 }

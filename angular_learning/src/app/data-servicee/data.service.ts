@@ -22,12 +22,11 @@ export class DataService {
           this.data[index].Email = param.Email,
           this.data[index].Position = param.Position,
           this.data[index].MaritalStatus = param.MaritalStatus,
-          this.data[index].Address = param.Address,
-          this.data[index].ZipCode = param.ZipCode,
-          this.data[index].City = param.City,
-          this.data[index].Country = param.Country
+          this.data[index].AddressData.Address = param.Address.AddressData.Address,
+          this.data[index].AddressData.ZipCode = param.AddressData.ZipCode,
+          this.data[index].AddressData.City = param.AddressData.City,
+          this.data[index].AddressData.Country = param.AddressData.Country
       }
-
     }
   }
 }
