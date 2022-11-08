@@ -2,14 +2,15 @@
 <button mat-button routerLink="/add">Add</button>
 <mat-form-field appearance="outline">
   <mat-label>Search</mat-label>
-  <input matInput placeholder="">
+  <input matInput placeholder="" [(ngModel)]="datafilter">
   <mat-hint>search people</mat-hint>
 </mat-form-field>
-<div class="list-card m-3" style="width: 20%;" *ngFor="let data of datalist">
+<p>{{test | uppercase}}</p>
+<div class="list-card m-3" style="width: 20%;" *ngFor="let data of datalist | filter:datafilter">
   <mat-card>
     <mat-card-header>
       <mat-card-title>
-        {{data.Name}}
+        {{data.Name| uppercase}}
       </mat-card-title>
       <mat-card-subtitle>
         Profile
@@ -17,8 +18,8 @@
     </mat-card-header>
     <mat-card-content *ngIf="detail">
       <h5 #idn>IdNumber : {{data.IdNumber}}</h5>
-      <h5>Name : {{data.Name}}</h5>
-      <h5>Ade : {{data.Age}}</h5>
+      <h5>Name : {{data.Name}} </h5>
+      <h5>Age : {{data.Age}}</h5>
       <h5>Gender : {{data.Gender}}</h5>
       <h5>Email : {{data.Email}}</h5>
       <h5>Position : {{data.Position}}</h5>

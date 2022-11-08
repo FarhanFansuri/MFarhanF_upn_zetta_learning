@@ -5,8 +5,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(data: any[], filterkey: any): any {
+    if (data.length == 0 || filterkey == '') {
+      return data;
+    } else {
+      return data.filter((parse) => {
+        return parse.Name.toLowerCase().split(' ').join('').indexOf(filterkey.toLowerCase()) >= 0
+      })
+    }
   }
 
 }

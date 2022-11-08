@@ -12,7 +12,7 @@ export class ListComponent implements OnInit {
   [x: string]: any;
 
   detail: boolean = false;
-
+  datafilter: any = '';
   constructor(private dataservice: DataService, private router: Router) { }
   datalist: any[] = this.dataservice.data;
   ngOnInit(): void {
@@ -21,6 +21,7 @@ export class ListComponent implements OnInit {
   onDetail() {
     this.detail = !this.detail;
   }
+  test: string = "hello";
 
   edit(param: any) {
     this.router.navigate(['edit/' + param])
