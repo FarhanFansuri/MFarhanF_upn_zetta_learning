@@ -80,26 +80,28 @@
               Address Detail
             </mat-card-title>
             <ng-container *ngFor="let addr of addData;index as i" [formGroupName]="i">
-              <mat-form-field appearance="legacy">
-                <mat-label>Address</mat-label>
-                <input matInput formControlName="Address" placeholder=" ">
-                <mat-hint>Hint</mat-hint>
-              </mat-form-field>
-              <mat-form-field appearance="legacy">
-                <mat-label>Zipcode</mat-label>
-                <input matInput formControlName="ZipCode" placeholder=" ">
-                <mat-hint>Hint</mat-hint>
-              </mat-form-field>
-              <mat-form-field appearance="legacy">
-                <mat-label>City</mat-label>
-                <input matInput formControlName="City" placeholder=" ">
-                <mat-hint>Hint</mat-hint>
-              </mat-form-field>
-              <mat-form-field appearance="legacy">
-                <mat-label>Country</mat-label>
-                <input matInput formControlName="Country" placeholder=" ">
-                <mat-hint>Hint</mat-hint>
-              </mat-form-field>
+              <div class="border mt-3" style="border-radius: 10px;padding:3%">
+                <mat-form-field appearance="legacy">
+                  <mat-label>Address</mat-label>
+                  <input matInput formControlName="Address" placeholder=" ">
+                  <mat-hint>Hint</mat-hint>
+                </mat-form-field><br>
+                <mat-form-field appearance="legacy">
+                  <mat-label>Zipcode</mat-label>
+                  <input matInput formControlName="ZipCode" placeholder=" ">
+                  <mat-hint>Hint</mat-hint>
+                </mat-form-field><br>
+                <mat-form-field appearance="legacy">
+                  <mat-label>City</mat-label>
+                  <input matInput formControlName="City" placeholder=" ">
+                  <mat-hint>Hint</mat-hint>
+                </mat-form-field><br>
+                <mat-form-field appearance="legacy">
+                  <mat-label>Country</mat-label>
+                  <input matInput formControlName="Country" placeholder=" ">
+                  <mat-hint>Hint</mat-hint>
+                </mat-form-field>
+              </div>
             </ng-container>
           </div>
         </form>
@@ -109,7 +111,7 @@
           Kirim
         </button>
         <button mat-raised-button (click)="addAddress()" color="primary">
-          Tambah
+          Tambah Alamat
         </button>
       </mat-card-actions>
     </mat-card>
