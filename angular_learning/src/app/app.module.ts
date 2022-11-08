@@ -14,6 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { DataService } from './data-servicee/data.service';
 import { MatRadioModule } from '@angular/material/radio';
+import { FilterPipe } from './filter.pipe';
 
 
 
@@ -22,7 +23,8 @@ import { MatRadioModule } from '@angular/material/radio';
     AppComponent,
     AddComponent,
     EditComponent,
-    ListComponent
+    ListComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
