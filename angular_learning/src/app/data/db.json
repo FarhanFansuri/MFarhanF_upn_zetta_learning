@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "berita 1",
+      "content": "kontent 1"
+    },
+    {
+      "id": 2,
+      "title": "berita 2",
+      "content": "kontent 2"
+    },
+    {
+      "id": 3,
+      "title": "Berita 3",
+      "content": "isi kontent 3"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
