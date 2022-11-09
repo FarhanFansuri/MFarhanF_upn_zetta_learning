@@ -16,13 +16,15 @@ import { MatRadioModule } from '@angular/material/radio';
 import { EditDataComponent } from './edit/edit-data/edit-data.component';
 import { ListDataComponent } from './list/list-data/list-data.component';
 import { SearchPipe } from './search.pipe';
+import { AddDataComponent } from './add/add-data/add-data.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EditDataComponent,
     ListDataComponent,
-    SearchPipe
+    SearchPipe,
+    AddDataComponent
   ],
   imports: [
     BrowserModule,

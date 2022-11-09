@@ -14,6 +14,21 @@
       "id": 3,
       "title": "Berita 3",
       "content": "isi kontent 3"
+    },
+    {
+      "id": 4,
+      "title": "berita 4",
+      "content": "isi konten berita 4"
+    },
+    {
+      "id": 5,
+      "title": "Berita 5",
+      "content": "isi konten berita 5"
+    },
+    {
+      "id": 6,
+      "title": "Berita 6",
+      "content": "isi kontent berita 6"
     }
   ],
   "profile": {

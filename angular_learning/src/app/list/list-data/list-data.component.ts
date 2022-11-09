@@ -10,7 +10,11 @@ DataService
 })
 export class ListDataComponent implements OnInit {
 
-  constructor(private datas: DataService, private router: Router) { }
+  constructor(private datas: DataService, private router: Router) {
+    this.datas.getData().subscribe((data) => {
+      this.data = data;
+    })
+  }
   data: any = []
   filterdata: any = ''
   ngOnInit(): void {

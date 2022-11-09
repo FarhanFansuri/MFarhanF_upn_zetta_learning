@@ -3,7 +3,8 @@
     <mat-label>Outline form field</mat-label>
     <input matInput placeholder="Placeholder" [(ngModel)]="filterdata">
     <mat-hint>Pencarian</mat-hint>
-  </mat-form-field>
+  </mat-form-field><br><br>
+  <button mat-raised-button color="primary" routerLink="/add">ADD</button>
   <div *ngFor="let getdata of data | search:filterdata">
     <div class="mt-3">
       <mat-card class="example-card">
