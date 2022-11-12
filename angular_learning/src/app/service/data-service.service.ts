@@ -13,4 +13,7 @@ export class DataServiceService {
   getData(): Observable<any[]> {
     return this.http.get<any[]>("http://localhost:3000/data")
   }
+  addData(data: any): Observable<any[]> {
+    return this.http.post<any[]>("http://localhost:3000/second", data)
+  }
 }

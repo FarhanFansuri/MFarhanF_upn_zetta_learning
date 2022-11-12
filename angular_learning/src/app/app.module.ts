@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -39,17 +40,20 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { DataServiceService } from './service/data-service.service';
 import { TruthPipe } from './pipe/truth.pipe';
 import { SearchPipe } from './pipe/search.pipe';
-import { FormsModule } from '@angular/forms';
-
-
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddFormComponent } from './add/add-form/add-form.component';
+import { TableComponent } from './table/table/table.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TruthPipe,
-    SearchPipe
+    SearchPipe,
+    AddFormComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -83,7 +87,15 @@ import { FormsModule } from '@angular/forms';
     MatSortModule,
     MatPaginatorModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule,
+    AppRoutingModule,
+    MatButtonModule,
+    MatNativeDateModule,
+    MatRippleModule,
+    ReactiveFormsModule
+
+
   ],
   providers: [DataServiceService],
   bootstrap: [AppComponent]
